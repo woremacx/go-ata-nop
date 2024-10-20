@@ -20,12 +20,12 @@ RUN set -eux; \
 
 WORKDIR /app
 
-COPY --from=builder /build/go-wasabi-signer /app/go-wasabi-signer
+COPY --from=builder /build/go-ata-nop /app/go-ata-nop
 
 EXPOSE 8080
 
 USER nobody:nogroup
 
-CMD ["/app/go-wasabi-signer"]
+CMD ["/app/go-ata-nop"]
 
-LABEL org.opencontainers.image.source https://github.com/woremacx/go-wasabi-signer
+LABEL org.opencontainers.image.source https://github.com/woremacx/go-ata-nop
